@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -265,17 +264,22 @@
         </div>
     </section>
 
-    <!-- Affiliate Offers Section -->
-    <section class="affiliate-offers">
-        <div class="container">
-            <h2 id="offers-title">Best Offers</h2>
-            <div class="offers">
-                <div class="offer">
-                    <img src="https://via.placeholder.com/300x200?text=Flight+Offer" alt="Flight Offer">
-                    <h3 id="offer-title">Special Offer on Flights</h3>
-                    <p id="offer-description">Book your flight now with the best prices!</p>
-                    <a href="https://affiliate-link.com?ref=youraffiliateID" target="_blank">Book Now</a>
-                </div>
+ <!-- Affiliate Offers Section -->
+<section class="affiliate-offers">
+    <div class="container">
+        <h2 id="offers-title">Best Offers</h2>
+        <div class="offers">
+            <div class="offer">
+                <img src="https://via.placeholder.com/300x200?text=Flight+Offer" alt="Flight Offer">
+                <h3 id="offer-title">Special Offer on Flights</h3>
+                <p id="offer-description">Book your flight now with the best prices!</p>
+                <!-- تعديل الرابط إلى صفحة flight2.html -->
+                <a href="flight2.html" target="_blank">Book Now</a>
+            </div>
+            <!-- More offers can be added here -->
+        </div>
+    </div>
+</section>
                 <!-- More offers can be added here -->
             </div>
         </div>
