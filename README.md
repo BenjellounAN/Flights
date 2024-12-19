@@ -267,7 +267,7 @@
             <div class="offers">
                 <div class="offer">
                     <img src="https://via.placeholder.com/300x200?text=Flight+Offer" alt="Flight Offer">
-                    <h3 id="offer-title">Special Offer on Flights</h3>
+                    <h3 id=](https://upgradedpoints.com/wp-content/uploads/2018/06/shutterstock_654670291.jpg?auto=webp&disable=upscale&width=1200)"offer-title">Special Offer on Flights</h3>
                     <p id="offer-description">Book your flight now with the best prices!</p>
                     <a href="https://affiliate-link.com?ref=youraffiliateID" target="_blank">Book Now</a>
                 </div>
