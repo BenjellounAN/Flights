@@ -22,7 +22,7 @@
         header {
             background: #0d6efd;
             color: white;
-            padding: 30px 0;
+            padding: 40px 0;
             text-align: center;
             position: relative;
         }
@@ -33,17 +33,18 @@
 
         header p {
             font-size: 18px;
+            margin-top: 10px;
         }
 
         /* Language Selector */
         .language-selector {
             position: absolute;
-            top: 30px;
+            top: 20px;
             right: 30px;
             background-color: #fff;
             border-radius: 5px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 10px;
+            padding: 8px 12px;
         }
 
         .language-selector select {
@@ -74,19 +75,21 @@
 
         .search-section h2 {
             font-size: 28px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .search-section .form-group {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
+            gap: 20px;
         }
 
         .search-section .form-group label {
             font-size: 16px;
             width: 100%;
+            text-align: left;
+            margin-bottom: 8px;
         }
 
         .search-section .form-group input,
@@ -95,7 +98,7 @@
             font-size: 16px;
             border: 1px solid #ccc;
             border-radius: 8px;
-            width: 200px;
+            width: 240px;
             transition: all 0.3s ease-in-out;
         }
 
@@ -115,6 +118,7 @@
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease-in-out;
+            margin-top: 20px;
         }
 
         .search-section button:hover {
@@ -182,7 +186,8 @@
 
         .offer h3 {
             font-size: 20px;
-            margin-bottom: 15px;
+            margin-top: 15px;
+            margin-bottom: 10px;
         }
 
         .offer p {
@@ -278,67 +283,44 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Flight Booking. All Rights Reserved.</p>
+        <p>&copy; 2024 Flight Booking. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript -->
     <script>
-        const langContent = {
-            en: {
-                "site-title": "Flight Booking Site",
-                "site-description": "Best offers for booking flights worldwide",
-                "search-title": "Search for Your Flight",
-                "from-label": "From:",
-                "to-label": "To:",
-                "departure-label": "Departure Date:",
-                "offers-title": "Best Offers",
-                "offer-title": "Special Offer on Flights",
-                "offer-description": "Book your flight now with the best prices!"
-            },
-            fr: {
-                "site-title": "Site de Réservation de Vols",
-                "site-description": "Meilleures offres pour réserver des vols dans le monde entier",
-                "search-title": "Recherchez votre vol",
-                "from-label": "De :",
-                "to-label": "À :",
-                "departure-label": "Date de départ :",
-                "offers-title": "Meilleures offres",
-                "offer-title": "Offre spéciale sur les vols",
-                "offer-description": "Réservez votre vol maintenant avec les meilleurs prix !"
-            },
-            es: {
-                "site-title": "Sitio de Reserva de Vuelos",
-                "site-description": "Mejores ofertas para reservar vuelos en todo el mundo",
-                "search-title": "Busca tu vuelo",
-                "from-label": "¿De dónde?",
-                "to-label": "¿A dónde?",
-                "departure-label": "Fecha de salida:",
-                "offers-title": "Mejores ofertas",
-                "offer-title": "Oferta especial en vuelos",
-                "offer-description": "¡Reserva tu vuelo ahora con los mejores precios!"
-            },
-            ar: {
-                "site-title": "موقع حجز الطيران",
-                "site-description": "أفضل العروض لحجز الطائرات في جميع أنحاء العالم",
-                "search-title": "ابحث عن رحلتك",
-                "from-label": "من:",
-                "to-label": "إلى:",
-                "departure-label": "تاريخ المغادرة:",
-                "offers-title": "أفضل العروض",
-                "offer-title": "عرض خاص على الرحلات",
-                "offer-description": "احجز رحلتك الآن بأفضل الأسعار!"
-            }
-        };
-
         function changeLanguage() {
-            const lang = document.getElementById("language-select").value;
-            const content = langContent[lang];
-
-            for (const id in content) {
-                const element = document.getElementById(id);
-                if (element) {
-                    element.innerHTML = content[id];
-                }
+            var lang = document.getElementById('language-select').value;
+            // Logic to change content based on selected language
+            // This would involve replacing the text content for the site with the relevant translations
+            if (lang == 'fr') {
+                document.getElementById('site-title').innerText = "Site de Réservation de Vol";
+                document.getElementById('site-description').innerText = "Meilleures offres pour réserver des vols dans le monde entier";
+                document.getElementById('search-title').innerText = "Recherchez votre vol";
+                document.getElementById('from-label').innerText = "De:";
+                document.getElementById('to-label').innerText = "À:";
+                document.getElementById('departure-label').innerText = "Date de départ:";
+                document.getElementById('offers-title').innerText = "Meilleures offres";
+                document.getElementById('offer-title').innerText = "Offre spéciale sur les vols";
+                document.getElementById('offer-description').innerText = "Réservez votre vol maintenant avec les meilleurs prix!";
+            } else if (lang == 'es') {
+                document.getElementById('site-title').innerText = "Sitio de Reservas de Vuelos";
+                document.getElementById('site-description').innerText = "Mejores ofertas para reservar vuelos a nivel mundial";
+                document.getElementById('search-title').innerText = "Busca tu vuelo";
+                document.getElementById('from-label').innerText = "De:";
+                document.getElementById('to-label').innerText = "A:";
+                document.getElementById('departure-label').innerText = "Fecha de salida:";
+                document.getElementById('offers-title').innerText = "Mejores ofertas";
+                document.getElementById('offer-title').innerText = "Oferta especial en vuelos";
+                document.getElementById('offer-description').innerText = "¡Reserva tu vuelo ahora con los mejores precios!";
+            } else if (lang == 'ar') {
+                document.getElementById('site-title').innerText = "موقع حجز الرحلات الجوية";
+                document.getElementById('site-description').innerText = "أفضل العروض لحجز الرحلات الجوية حول العالم";
+                document.getElementById('search-title').innerText = "ابحث عن رحلتك";
+                document.getElementById('from-label').innerText = "من:";
+                document.getElementById('to-label').innerText = "إلى:";
+                document.getElementById('departure-label').innerText = "تاريخ المغادرة:";
+                document.getElementById('offers-title').innerText = "أفضل العروض";
+                document.getElementById('offer-title').innerText = "عرض خاص على الرحلات الجوية";
+                document.getElementById('offer-description').innerText = "احجز رحلتك الآن بأفضل الأسعار!";
             }
         }
     </script>
