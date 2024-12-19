@@ -267,7 +267,7 @@
             <div class="offers">
                 <div class="offer">
                     <img src="https://via.placeholder.com/300x200?text=Flight+Offer" alt="Flight Offer">
-                    <h3 id=](https://upgradedpoints.com/wp-content/uploads/2018/06/shutterstock_654670291.jpg?auto=webp&disable=upscale&width=1200)"offer-title">Special Offer on Flights</h3>
+                    <h3 id="offer-title">Special Offer on Flights</h3>
                     <p id="offer-description">Book your flight now with the best prices!</p>
                     <a href="https://affiliate-link.com?ref=youraffiliateID" target="_blank">Book Now</a>
                 </div>
@@ -281,66 +281,65 @@
         <p>&copy; 2024 Flight Booking. All Rights Reserved.</p>
     </footer>
 
+    <!-- JavaScript -->
     <script>
-        const translations = {
+        const langContent = {
             en: {
-                'site-title': 'Flight Booking Site',
-                'site-description': 'Best offers for booking flights worldwide',
-                'search-title': 'Search for Your Flight',
-                'from-label': 'From:',
-                'to-label': 'To:',
-                'departure-label': 'Departure Date:',
-                'offers-title': 'Best Offers',
-                'offer-title': 'Special Offer on Flights',
-                'offer-description': 'Book your flight now with the best prices!',
+                "site-title": "Flight Booking Site",
+                "site-description": "Best offers for booking flights worldwide",
+                "search-title": "Search for Your Flight",
+                "from-label": "From:",
+                "to-label": "To:",
+                "departure-label": "Departure Date:",
+                "offers-title": "Best Offers",
+                "offer-title": "Special Offer on Flights",
+                "offer-description": "Book your flight now with the best prices!"
             },
             fr: {
-                'site-title': 'Site de Réservation de Vols',
-                'site-description': 'Meilleures offres pour réserver des vols dans le monde entier',
-                'search-title': 'Rechercher votre vol',
-                'from-label': 'De:',
-                'to-label': 'À:',
-                'departure-label': 'Date de départ:',
-                'offers-title': 'Meilleures offres',
-                'offer-title': 'Offre spéciale sur les vols',
-                'offer-description': 'Réservez votre vol maintenant avec les meilleurs prix!',
+                "site-title": "Site de Réservation de Vols",
+                "site-description": "Meilleures offres pour réserver des vols dans le monde entier",
+                "search-title": "Recherchez votre vol",
+                "from-label": "De :",
+                "to-label": "À :",
+                "departure-label": "Date de départ :",
+                "offers-title": "Meilleures offres",
+                "offer-title": "Offre spéciale sur les vols",
+                "offer-description": "Réservez votre vol maintenant avec les meilleurs prix !"
             },
             es: {
-                'site-title': 'Sitio de Reservas de Vuelos',
-                'site-description': 'Mejores ofertas para reservar vuelos en todo el mundo',
-                'search-title': 'Buscar tu vuelo',
-                'from-label': 'Desde:',
-                'to-label': 'Hacia:',
-                'departure-label': 'Fecha de salida:',
-                'offers-title': 'Mejores ofertas',
-                'offer-title': 'Oferta especial en vuelos',
-                'offer-description': '¡Reserva tu vuelo ahora con los mejores precios!',
+                "site-title": "Sitio de Reserva de Vuelos",
+                "site-description": "Mejores ofertas para reservar vuelos en todo el mundo",
+                "search-title": "Busca tu vuelo",
+                "from-label": "¿De dónde?",
+                "to-label": "¿A dónde?",
+                "departure-label": "Fecha de salida:",
+                "offers-title": "Mejores ofertas",
+                "offer-title": "Oferta especial en vuelos",
+                "offer-description": "¡Reserva tu vuelo ahora con los mejores precios!"
             },
             ar: {
-                'site-title': 'موقع حجز الطائرات',
-                'site-description': 'أفضل العروض لحجز الرحلات الجوية حول العالم',
-                'search-title': 'ابحث عن رحلتك',
-                'from-label': 'من:',
-                'to-label': 'إلى:',
-                'departure-label': 'تاريخ المغادرة:',
-                'offers-title': 'أفضل العروض',
-                'offer-title': 'عرض خاص على الرحلات',
-                'offer-description': 'احجز رحلتك الآن بأفضل الأسعار!',
+                "site-title": "موقع حجز الطيران",
+                "site-description": "أفضل العروض لحجز الطائرات في جميع أنحاء العالم",
+                "search-title": "ابحث عن رحلتك",
+                "from-label": "من:",
+                "to-label": "إلى:",
+                "departure-label": "تاريخ المغادرة:",
+                "offers-title": "أفضل العروض",
+                "offer-title": "عرض خاص على الرحلات",
+                "offer-description": "احجز رحلتك الآن بأفضل الأسعار!"
             }
         };
 
-        // Change text content based on the selected language
         function changeLanguage() {
-            const lang = document.getElementById('language-select').value;
-            document.getElementById('site-title').textContent = translations[lang]['site-title'];
-            document.getElementById('site-description').textContent = translations[lang]['site-description'];
-            document.getElementById('search-title').textContent = translations[lang]['search-title'];
-            document.getElementById('from-label').textContent = translations[lang]['from-label'];
-            document.getElementById('to-label').textContent = translations[lang]['to-label'];
-            document.getElementById('departure-label').textContent = translations[lang]['departure-label'];
-            document.getElementById('offers-title').textContent = translations[lang]['offers-title'];
-            document.getElementById('offer-title').textContent = translations[lang]['offer-title'];
-            document.getElementById('offer-description').textContent = translations[lang]['offer-description'];
+            const lang = document.getElementById("language-select").value;
+            const content = langContent[lang];
+
+            for (const id in content) {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.innerHTML = content[id];
+                }
+            }
         }
     </script>
 </body>
