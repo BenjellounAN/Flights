@@ -1,27 +1,110 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>قائمة مطعم ثلاثية الأبعاد</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<title>Radouane Barber | QR</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- QR Library -->
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f4f4f4;
+        font-family: Arial, sans-serif;
+    }
+
+    .card {
+        background: #fff;
+        padding: 30px;
+        width: 320px;
+        text-align: center;
+        border-radius: 18px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    h1 {
+        margin-bottom: 15px;
+        font-size: 22px;
+        color: #111;
+    }
+
+    #qrcode {
+        margin: 20px auto;
+        width: 200px;
+        height: 200px;
+    }
+
+    .links a {
+        display: block;
+        margin: 10px 0;
+        padding: 12px;
+        border-radius: 10px;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .instagram {
+        background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af,#515bd4);
+    }
+
+    .facebook {
+        background: #1877f2;
+    }
+
+    .links a:hover {
+        transform: scale(1.04);
+        opacity: 0.95;
+    }
+
+    .note {
+        margin-top: 15px;
+        font-size: 13px;
+        color: #777;
+    }
+</style>
 </head>
+
 <body>
-    <div id="loading">جاري تحميل القائمة...</div>
-    
-    <!-- عناصر التحكم -->
-    <div class="controls">
-        <button id="prevBtn">الصفحة السابقة</button>
-        <button id="nextBtn">الصفحة التالية</button>
+
+<div class="card">
+    <h1>Radouane Barber</h1>
+
+    <!-- QR Code -->
+    <div id="qrcode"></div>
+
+    <div class="links">
+        <a class="instagram" href="https://www.instagram.com/radouane.barber?igsh=MXJrZTlvNW84eHg3eA==" target="_blank">
+            Instagram
+        </a>
+
+        <a class="facebook" href="https://www.facebook.com/share/17xHPhVqAh/?mibextid=wwXIfr" target="_blank">
+            Facebook
+        </a>
     </div>
 
-    <!-- سيتم إضافة canvas تلقائياً بواسطة Three.js -->
-    
-    <!-- مكتبات -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="js/menu-data.js"></script>
-    <script src="js/BookPage.js"></script>
-    <script src="js/RestaurantMenuBook.js"></script>
-    <script src="js/main.js"></script>
+    <div class="note">
+        Scan QR • Choose your platform
+    </div>
+</div>
+
+<script>
+    new QRCode(document.getElementById("qrcode"), {
+        text: window.location.href,
+        width: 200,
+        height: 200,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+</script>
+
 </body>
 </html>
